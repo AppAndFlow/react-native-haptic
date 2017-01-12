@@ -12,6 +12,16 @@
 3. In XCode, in the project navigator, select your project. Add `libReactNativeHaptic.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
+## How to use
+```javascript  
+  import ReactNativeHaptic from 'react-native-haptic';
+  
+  <TouchableHighlight style={styles.wrapper} onPress={() => ReactNativeHaptic.generate('notification')}>
+  ```
+## Example
+![alt tag](http://imgur.com/1eTeFeR.png)
+
+I would suggest to run the example directly on your device, since chances are you won't feel the feedback in the simulator ;)
 ## Methods
 ```javascript
   /**
@@ -37,8 +47,4 @@
       ReactNativeHaptic.generate(type);
     }
   ```
-  ## How to use
-```javascript  
-  import ReactNativeHaptic from 'react-native-haptic';
-  <TouchableHighlight style={styles.wrapper} onPress={() => ReactNativeHaptic.generate('notification')}>
-  ```
+
