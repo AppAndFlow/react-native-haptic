@@ -1,8 +1,7 @@
-
 {
   "name": "react-native-haptic",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Getting started",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,9 +9,21 @@
   "keywords": [
     "react-native"
   ],
-  "author": "",
-  "license": "",
+  "author": "Charles Vinette",
+  "license": "MIT",
   "peerDependencies": {
+    "react-native": "^0.29.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlesvinette/react-native-haptic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/charlesvinette/react-native-haptic/issues"
+  },
+  "homepage": "https://github.com/charlesvinette/react-native-haptic#readme",
+  "dependencies": {
+    "react": "^15.2.0",
     "react-native": "^0.29.0"
   }
 }
