@@ -11,7 +11,7 @@ var {
   AppRegistry,
 } = ReactNative;
 
-import HapticFeedbackIOS from 'react-native-haptic';
+import ReactNativeHaptic from 'react-native-haptic';
 
 class Example extends Component {
   render(){
@@ -19,7 +19,7 @@ class Example extends Component {
       <View style={styles.wrapper}>
           <TouchableHighlight
           style={styles.wrapper}
-          onPress={() => HapticFeedbackIOS.prepare()}>
+          onPress={() => ReactNativeHaptic.prepare()}>
             <View style={styles.button}>
               <Text>Prepare Taptic Engine for Haptic Feedback</Text>
             </View>
@@ -27,7 +27,7 @@ class Example extends Component {
 
         <TouchableHighlight
         style={styles.wrapper}
-        onPress={() => HapticFeedbackIOS.generate('impact')}>
+        onPress={() => ReactNativeHaptic.generate('impact')}>
           <View style={styles.button}>
             <Text>Impact Feedback</Text>
           </View>
@@ -35,7 +35,7 @@ class Example extends Component {
 
         <TouchableHighlight
         style={styles.wrapper}
-        onPress={() => HapticFeedbackIOS.generate('notification')}>
+        onPress={() => ReactNativeHaptic.generate('notification')}>
           <View style={styles.button}>
             <Text>Notification Feedback</Text>
           </View>
@@ -43,7 +43,7 @@ class Example extends Component {
 
         <TouchableHighlight
         style={styles.wrapper}
-        onPress={() => HapticFeedbackIOS.generate('selection')}>
+        onPress={() => ReactNativeHaptic.generate('selection')}>
           <View style={styles.button}>
             <Text>Selection Changed Feedback</Text>
           </View>
