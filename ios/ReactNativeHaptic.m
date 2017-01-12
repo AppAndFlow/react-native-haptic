@@ -7,10 +7,10 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import "RCTHapticFeedback.h"
+#import "ReactNativeHaptic.h"
 #import <UIKit/UIKit.h>
 
-@implementation RCTHapticFeedback
+@implementation ReactNativeHaptic
 
 {
   UIImpactFeedbackGenerator *_impactFeedback;

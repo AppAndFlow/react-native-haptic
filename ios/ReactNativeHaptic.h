@@ -10,6 +10,6 @@
 #import <Foundation/Foundation.h>
 #import <RCTBridgeModule.h>
 
-@interface RCTHapticFeedback : NSObject<RCTBridgeModule>
+@interface ReactNativeHaptic : NSObject<RCTBridgeModule>
 
 @end

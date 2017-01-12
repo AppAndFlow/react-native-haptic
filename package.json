@@ -12,7 +12,8 @@
   "author": "Charles Vinette",
   "license": "MIT",
   "peerDependencies": {
-    "react-native": "^0.29.0"
+    "react-native": "^0.29.0",
+    "react": ">=15.4.0"
   },
   "repository": {
     "type": "git",
@@ -21,9 +22,5 @@
   "bugs": {
     "url": "https://github.com/charlesvinette/react-native-haptic/issues"
   },
-  "homepage": "https://github.com/charlesvinette/react-native-haptic#readme",
-  "dependencies": {
-    "react": "^15.2.0",
-    "react-native": "^0.29.0"
-  }
+  "homepage": "https://github.com/charlesvinette/react-native-haptic#readme"
 }

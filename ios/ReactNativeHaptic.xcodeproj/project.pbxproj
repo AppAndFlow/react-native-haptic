@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F75162DC1E281D9D0018C366 /* RCTHapticFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = F75162DB1E281D9D0018C366 /* RCTHapticFeedback.m */; };
+		F75162DC1E281D9D0018C366 /* ReactNativeHaptic.m in Sources */ = {isa = PBXBuildFile; fileRef = F75162DB1E281D9D0018C366 /* ReactNativeHaptic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,8 +24,8 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libReactNativeHaptic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReactNativeHaptic.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F75162DA1E281D9D0018C366 /* RCTHapticFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTHapticFeedback.h; sourceTree = "<group>"; };
-		F75162DB1E281D9D0018C366 /* RCTHapticFeedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTHapticFeedback.m; sourceTree = "<group>"; };
+		F75162DA1E281D9D0018C366 /* ReactNativeHaptic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactNativeHaptic.h; sourceTree = "<group>"; };
+		F75162DB1E281D9D0018C366 /* ReactNativeHaptic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactNativeHaptic.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,8 +50,8 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				F75162DA1E281D9D0018C366 /* RCTHapticFeedback.h */,
-				F75162DB1E281D9D0018C366 /* RCTHapticFeedback.m */,
+				F75162DA1E281D9D0018C366 /* ReactNativeHaptic.h */,
+				F75162DB1E281D9D0018C366 /* ReactNativeHaptic.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,7 +112,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F75162DC1E281D9D0018C366 /* RCTHapticFeedback.m in Sources */,
+				F75162DC1E281D9D0018C366 /* ReactNativeHaptic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
