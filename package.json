@@ -1,6 +1,6 @@
 
 {
-  "name": "-react-native-haptic",
+  "name": "react-native-haptic",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,8 +13,6 @@
   "author": "",
   "license": "",
   "peerDependencies": {
-    "react-native": "^0.29.0",
-    "react-native-windows": "^0.29.0"
-
+    "react-native": "^0.29.0"
   }
 }
