@@ -1,7 +1,7 @@
 {
   "name": "react-native-haptic",
   "version": "1.0.4",
-  "description": "## Getting started",
+  "description": "iOS 10 + haptic feedback for React Native applications",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
