@@ -1,28 +1,45 @@
 
 # react-native-haptic
 
-## Getting started
+## Install the package in your project directory
 
 `$ npm install react-native-haptic --save`
 
-### Mostly automatic installation
-
-`$ react-native link react-native-haptic`
-
-### Manual installation
-
-
-#### iOS
+#### Link the library to the XCode proj of your React Native project (ios -> "your_project.xcodeproj").
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
 2. Go to `node_modules` ➜ `-react-native-haptic` and add `ReactNativeHaptic.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libReactNativeHaptic.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
-## Usage
+## Methods
 ```javascript
-import ReactNativeHaptic from 'react-native-haptic';
-
-// TODO: What do with the module?
-ReactNativeHaptic;
-```
+  /**
+   * @static
+   * @method prepare
+   * @description Prepares the Taptic Engine (Awaken state). Usually used seconds before triggering a feedback.
+   * This is optional, mostly used when the feedback needs to be synced with sound.
+   *
+   */
+  
+    static prepare() {
+      ReactNativeHaptic.prepare();
+    }
+  
+  /**
+   * @static
+   * @method Generate
+   * @description Triggers haptic feedback of type :type
+   * @param type Type of haptic feedback
+   */
+    
+    static generate(type: 'impact' | 'notification' | 'selection') {
+      ReactNativeHaptic.generate(type);
+    }
+  ```
+  ## Usage
+  
+  import ReactNativeHaptic from 'react-native-haptic';
+```javascript  
+  <TouchableHighlight style={styles.wrapper} onPress={() => ReactNativeHaptic.generate('notification')}>
+  ```
