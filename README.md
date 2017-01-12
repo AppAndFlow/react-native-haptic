@@ -37,9 +37,8 @@
       ReactNativeHaptic.generate(type);
     }
   ```
-  ## Usage
-  
-  import ReactNativeHaptic from 'react-native-haptic';
+  ## How to use
 ```javascript  
+  import ReactNativeHaptic from 'react-native-haptic';
   <TouchableHighlight style={styles.wrapper} onPress={() => ReactNativeHaptic.generate('notification')}>
   ```
