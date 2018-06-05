@@ -14,11 +14,15 @@
 
 NSString* deviceName()
 {
-  struct utsname systemInfo;
-  uname(&systemInfo);
-  
-  return [NSString stringWithCString:systemInfo.machine
-                            encoding:NSUTF8StringEncoding];
+  static NSString *deviceName;
+  if (deviceName == nil) {
+    struct utsname systemInfo;
+    uname(&systemInfo);
+
+    deviceName = [NSString stringWithCString:systemInfo.machine
+                                    encoding:NSUTF8StringEncoding];
+  }
+  return deviceName;
 }
 
 @implementation ReactNativeHaptic
