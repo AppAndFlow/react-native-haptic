@@ -1,12 +1,15 @@
 {
   "name": "react-native-haptic",
   "version": "1.0.7",
-  "description": "iOS 10 + haptic feedback for React Native applications",
+  "description": "iOS 10 and up, haptic feedback for React Native applications",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["react-native", "haptic"],
+  "keywords": [
+    "react-native",
+    "haptic"
+  ],
   "author": "Charles Vinette",
   "license": "MIT",
   "peerDependencies": {
