@@ -1,6 +1,6 @@
 {
   "name": "react-native-haptic",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "iOS 10 + haptic feedback for React Native applications",
   "main": "index.js",
   "scripts": {
