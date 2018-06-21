@@ -1,23 +1,24 @@
 {
   "name": "react-native-haptic",
-  "version": "1.0.5",
-  "description": "iOS 10 + haptic feedback for React Native applications",
+  "version": "2.0.0",
+  "description": "iOS 10+ haptic feedback for React Native applications",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "haptic"
   ],
   "author": "Charles Vinette",
   "license": "MIT",
   "peerDependencies": {
-    "react-native": "^0.29.0",
-    "react": ">=15.4.0"
+    "react-native": ">= 0.29.0",
+    "react": ">= 15.4.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/charlesvinette/react-native-haptic.git"
+    "url": "https://github.com/charlesvinette/react-native-haptic.git"
   },
   "bugs": {
     "url": "https://github.com/charlesvinette/react-native-haptic/issues"
