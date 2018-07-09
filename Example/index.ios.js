@@ -28,17 +28,49 @@ class Example extends React.Component {
 
           <TouchableHighlight
           style={styles.wrapper}
-          onPress={() => ReactNativeHaptic.generate('impact')}>
+          onPress={() => ReactNativeHaptic.generate('impactHeavy')}>
             <View style={styles.button}>
-              <Text>Impact Feedback</Text>
+              <Text>Impact Heavy</Text>
             </View>
           </TouchableHighlight>
 
           <TouchableHighlight
           style={styles.wrapper}
-          onPress={() => ReactNativeHaptic.generate('notification')}>
+          onPress={() => ReactNativeHaptic.generate('impactMedium')}>
             <View style={styles.button}>
-              <Text>Notification Feedback</Text>
+              <Text>Impact Medium</Text>
+            </View>
+          </TouchableHighlight>
+
+          <TouchableHighlight
+          style={styles.wrapper}
+          onPress={() => ReactNativeHaptic.generate('impactLight')}>
+            <View style={styles.button}>
+              <Text>Impact Light</Text>
+            </View>
+          </TouchableHighlight>
+
+          <TouchableHighlight
+          style={styles.wrapper}
+          onPress={() => ReactNativeHaptic.generate('notificationWarning')}>
+            <View style={styles.button}>
+              <Text>Notification Warning</Text>
+            </View>
+          </TouchableHighlight>
+
+          <TouchableHighlight
+          style={styles.wrapper}
+          onPress={() => ReactNativeHaptic.generate('notificationError')}>
+            <View style={styles.button}>
+              <Text>Notification Error</Text>
+            </View>
+          </TouchableHighlight>
+
+          <TouchableHighlight
+          style={styles.wrapper}
+          onPress={() => ReactNativeHaptic.generate('notificationSuccess')}>
+            <View style={styles.button}>
+              <Text>Notification Success</Text>
             </View>
           </TouchableHighlight>
 
@@ -46,7 +78,7 @@ class Example extends React.Component {
           style={styles.wrapper}
           onPress={() => ReactNativeHaptic.generate('selection')}>
             <View style={styles.button}>
-              <Text>Selection Changed Feedback</Text>
+              <Text>Selection Changed</Text>
             </View>
           </TouchableHighlight>
       </View>

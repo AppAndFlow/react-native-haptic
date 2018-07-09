@@ -3,6 +3,22 @@
 #import <AudioToolbox/AudioServices.h>
 #import <sys/utsname.h>
 
+#pragma mark - Notification Types
+
+// Deprecated names (including these to avoid breaking changes)
+static NSString * const HAPTIC_DEPRECATED_IMPACT = @"impact";
+static NSString * const HAPTIC_DEPRECATED_NOTIFICATION = @"notification";
+
+static NSString * const HAPTIC_IMPACT_LIGHT = @"impactLight";
+static NSString * const HAPTIC_IMPACT_MEDIUM = @"impactMedium";
+static NSString * const HAPTIC_IMPACT_HEAVY = @"impactHeavy";
+
+static NSString * const HAPTIC_NOTIFICATION_ERROR = @"notificationError";
+static NSString * const HAPTIC_NOTIFICATION_SUCCESS = @"notificationSuccess";
+static NSString * const HAPTIC_NOTIFICATION_WARNING = @"notificationWarning";
+
+static NSString * const HAPTIC_SELECTION = @"selection";
+
 NSString* deviceName()
 {
   static NSString *deviceName;
@@ -19,8 +35,12 @@ NSString* deviceName()
 @implementation ReactNativeHaptic
 
 {
-  UIImpactFeedbackGenerator *_impactFeedback;
+  UIImpactFeedbackGenerator *_impactFeedbackHeavy;
+  UIImpactFeedbackGenerator *_impactFeedbackMedium;
+  UIImpactFeedbackGenerator *_impactFeedbackLight;
+
   UINotificationFeedbackGenerator *_notificationFeedback;
+
   UISelectionFeedbackGenerator *_selectionFeedback;
 }
 
@@ -32,8 +52,12 @@ RCT_EXPORT_MODULE()
 {
   _bridge = bridge;
   if ([UIFeedbackGenerator class]) {
-    _impactFeedback = [UIImpactFeedbackGenerator new];
+    _impactFeedbackHeavy = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleHeavy];
+    _impactFeedbackMedium = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleMedium];
+    _impactFeedbackLight = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleLight];
+
     _notificationFeedback = [UINotificationFeedbackGenerator new];
+
     _selectionFeedback = [UISelectionFeedbackGenerator new];
   }
 }
@@ -48,19 +72,39 @@ RCT_EXPORT_METHOD(generate:(NSString *)type)
   if([self activatedAlternativeHapticForType:type]){
     return;
   }
-  if ([type isEqual: @"impact"]) {
-    [_impactFeedback impactOccurred];
-  } else if ([type isEqual:@"notification"]) {
+
+  // Impact notifications
+  if (type == HAPTIC_IMPACT_HEAVY) {
+    [_impactFeedbackHeavy impactOccurred];
+  } else if (type == HAPTIC_IMPACT_MEDIUM) {
+    [_impactFeedbackMedium impactOccurred];
+  } else if (type == HAPTIC_IMPACT_LIGHT) {
+    [_impactFeedbackLight impactOccurred];
+  }
+
+  else if (type == HAPTIC_NOTIFICATION_ERROR) {
+    [_notificationFeedback notificationOccurred:UINotificationFeedbackTypeError];
+  } else if (type == HAPTIC_NOTIFICATION_WARNING) {
     [_notificationFeedback notificationOccurred:UINotificationFeedbackTypeWarning];
-  } else if ([type isEqual:@"selection"]) {
+  } else if (type == HAPTIC_NOTIFICATION_SUCCESS) {
+    [_notificationFeedback notificationOccurred:UINotificationFeedbackTypeSuccess];
+  }
+
+  else if (type == HAPTIC_SELECTION) {
     [_selectionFeedback selectionChanged];
+  }
+
+  else if (type == HAPTIC_DEPRECATED_IMPACT) {
+    [_impactFeedbackMedium impactOccurred];
+  } else if (type == HAPTIC_DEPRECATED_NOTIFICATION) {
+    [_notificationFeedback notificationOccurred:UINotificationFeedbackTypeWarning];
   }
 }
 
 RCT_EXPORT_METHOD(prepare)
 {
   // Only calling prepare on one generator, it's sole purpose is to awake the taptic engine
-  [_impactFeedback prepare];
+  [_impactFeedbackMedium prepare];
 }
 
 #pragma mark - Private
@@ -71,12 +115,13 @@ RCT_EXPORT_METHOD(prepare)
 }
 
 - (BOOL)activatedAlternativeHapticForType:(NSString *)type {
+  // TODO: add support for all haptic styles?
   if([self needsAlternativeHaptic]){
-    if ([type isEqual: @"impact"]) {
+    if (type == HAPTIC_DEPRECATED_IMPACT) {
       AudioServicesPlaySystemSound((SystemSoundID) 1520);
-    } else if ([type isEqual:@"notification"]) {
+    } else if (type == HAPTIC_DEPRECATED_NOTIFICATION) {
       AudioServicesPlaySystemSound((SystemSoundID) 1521);
-    } else if ([type isEqual:@"selection"]) {
+    } else if (type == HAPTIC_SELECTION) {
       AudioServicesPlaySystemSound((SystemSoundID) 1519);
     }
     return YES;
