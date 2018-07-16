@@ -42,8 +42,8 @@ I would suggest to run the example directly on your device, since chances are yo
    * @description Triggers haptic feedback of type :type
    * @param type Type of haptic feedback
    */
-    
-    static generate(type: 'impact' | 'notification' | 'selection') {
+
+    static generate(type: 'impact' | 'notification' | 'selection' | 'impactLight' | 'impactMedium' | 'impactHeavy' | 'notificationError' | ' notificationSuccess' | 'notificationWarning') {
       ReactNativeHaptic.generate(type);
     }
   ```
