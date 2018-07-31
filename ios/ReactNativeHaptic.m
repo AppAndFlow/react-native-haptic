@@ -74,29 +74,29 @@ RCT_EXPORT_METHOD(generate:(NSString *)type)
   }
 
   // Impact notifications
-  if (type == HAPTIC_IMPACT_HEAVY) {
+  if ([type isEqualToString:HAPTIC_IMPACT_HEAVY]) {
     [_impactFeedbackHeavy impactOccurred];
-  } else if (type == HAPTIC_IMPACT_MEDIUM) {
+  } else if ([type isEqualToString:HAPTIC_IMPACT_MEDIUM]) {
     [_impactFeedbackMedium impactOccurred];
-  } else if (type == HAPTIC_IMPACT_LIGHT) {
+  } else if ([type isEqualToString:HAPTIC_IMPACT_LIGHT]) {
     [_impactFeedbackLight impactOccurred];
   }
 
-  else if (type == HAPTIC_NOTIFICATION_ERROR) {
+  else if ([type isEqualToString:HAPTIC_NOTIFICATION_ERROR]) {
     [_notificationFeedback notificationOccurred:UINotificationFeedbackTypeError];
-  } else if (type == HAPTIC_NOTIFICATION_WARNING) {
+  } else if ([type isEqualToString:HAPTIC_NOTIFICATION_WARNING]) {
     [_notificationFeedback notificationOccurred:UINotificationFeedbackTypeWarning];
-  } else if (type == HAPTIC_NOTIFICATION_SUCCESS) {
+  } else if ([type isEqualToString:HAPTIC_NOTIFICATION_SUCCESS]) {
     [_notificationFeedback notificationOccurred:UINotificationFeedbackTypeSuccess];
   }
 
-  else if (type == HAPTIC_SELECTION) {
+  else if ([type isEqualToString:HAPTIC_SELECTION]) {
     [_selectionFeedback selectionChanged];
   }
 
-  else if (type == HAPTIC_DEPRECATED_IMPACT) {
+  else if ([type isEqualToString:HAPTIC_DEPRECATED_IMPACT]) {
     [_impactFeedbackMedium impactOccurred];
-  } else if (type == HAPTIC_DEPRECATED_NOTIFICATION) {
+  } else if ([type isEqualToString:HAPTIC_DEPRECATED_NOTIFICATION]) {
     [_notificationFeedback notificationOccurred:UINotificationFeedbackTypeWarning];
   }
 }
