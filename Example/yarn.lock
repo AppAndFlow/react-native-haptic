@@ -2461,8 +2461,8 @@ marked-terminal@^1.6.2:
     node-emoji "^1.4.1"
 
 marked@^0.3.6:
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
+  version "0.3.19"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.19.tgz#5d47f709c4c9fc3c216b6d46127280f40b39d790"
 
 media-typer@0.3.0:
   version "0.3.0"
@@ -2918,6 +2918,9 @@ react-clone-referenced-element@^1.0.1:
 react-deep-force-update@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.0.1.tgz#f911b5be1d2a6fe387507dd6e9a767aa2924b4c7"
+
+"react-native-haptic@file:..":
+  version "1.0.1"
 
 react-native@0.40.0:
   version "0.40.0"
