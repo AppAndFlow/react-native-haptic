@@ -10,6 +10,7 @@ export declare type HapticFeedbackType =
   'notificationWarning';
 
 declare const ReactNativeHaptic: {
+  prepare(): void;
   generate(type: HapticFeedbackType): void
 }
 
