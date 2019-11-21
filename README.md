@@ -12,6 +12,16 @@
 3. In XCode, in the project navigator, select your project. Add `libReactNativeHaptic.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
+## For Android usage
+
+Add:
+```xml
+<uses-permission android:name="android.permission.VIBRATE"/> 
+```
+to the AndroidManifest.xml file. (/android/app/src/main)
+
+Source: https://facebook.github.io/react-native/docs/vibration
+
 ## How to use
 ```javascript  
   import ReactNativeHaptic from 'react-native-haptic';
