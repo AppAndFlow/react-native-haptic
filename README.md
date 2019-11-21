@@ -18,7 +18,7 @@ Add:
 ```xml
 <uses-permission android:name="android.permission.VIBRATE"/> 
 ```
-to the AndroidManifest.xml file.
+to the AndroidManifest.xml file. (/android/app/src/main)
 
 Source: https://facebook.github.io/react-native/docs/vibration
 
