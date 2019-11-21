@@ -1,4 +1,3 @@
-
 import { NativeModules, Platform, Vibration } from 'react-native';
 
 class ReactNativeHaptic {
