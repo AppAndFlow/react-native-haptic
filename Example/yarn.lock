@@ -2919,6 +2919,9 @@ react-deep-force-update@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.0.1.tgz#f911b5be1d2a6fe387507dd6e9a767aa2924b4c7"
 
+"react-native-haptic@file:..":
+  version "1.0.1"
+
 react-native@0.40.0:
   version "0.40.0"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.40.0.tgz#ca7b86a8e8fbc7653634ad47ca2ffd69fdf18ad5"
@@ -3556,8 +3559,8 @@ type-is@~1.6.6:
     mime-types "~2.1.13"
 
 ua-parser-js@^0.7.9:
-  version "0.7.12"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.12.tgz#04c81a99bdd5dc52263ea29d24c6bf8d4818a4bb"
+  version "0.7.28"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
 
 uglify-js@^2.6, uglify-js@^2.6.2:
   version "2.7.5"
